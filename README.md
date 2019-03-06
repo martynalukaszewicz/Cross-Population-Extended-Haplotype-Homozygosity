@@ -1,5 +1,9 @@
 # Cross-Population-Extended-Haplotype-Homozygosity 
 
+
+## Abstract
+The code derives unstandardized expected haplotype homozygosity, a statistic used to identify selective sweeps. Function written in R. 
+
 https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0040072&type=printable
 
 
