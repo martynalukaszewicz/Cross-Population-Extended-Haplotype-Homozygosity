@@ -7,7 +7,7 @@ library(plyr)  ## requires plyr package that contains count() function
 ## and columns corresponding to bi-allelelic SNPs. In the example each population is of size 4, with 6 SNPs per individual.
 popX <- as.data.frame(matrix(c(1,1,0,0,0,1,1,0,1,0,1,1,0,1,0,0,0,0,1,1,0,1,0,1),nrow=4,ncol=6,byrow=T))
 popY <-as.data.frame(matrix(c(0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0),nrow=4,ncol=6,byrow=T))
-
+## 
 
 
 
@@ -67,5 +67,6 @@ calc_unstandardized_xp_ehh <- function(popX,popY){
   ## unstandardized_xp_ehh is approx. when the rate of EHH decay is similar on popX and popY alleles
   return(unstandardized_xp_ehh)
 }
+
 
 calc_unstandardized_xp_ehh(popX,popY)
