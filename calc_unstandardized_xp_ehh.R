@@ -2,7 +2,9 @@
 ## by Voight et al., eq (1).
 
 library(plyr)  ## requires plyr package that contains count() function
-
+## Example usage:
+## Input 2 populations, popX and PopY, in a data frame format, with rows corresponding to individuals in a population,
+## and columns corresponding to bi-allelelic SNPs. In the example each population is of size 4, with 6 SNPs per individual.
 popX <- as.data.frame(matrix(c(1,1,0,0,0,1,1,0,1,0,1,1,0,1,0,0,0,0,1,1,0,1,0,1),nrow=4,ncol=6,byrow=T))
 popY <-as.data.frame(matrix(c(0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0),nrow=4,ncol=6,byrow=T))
 
