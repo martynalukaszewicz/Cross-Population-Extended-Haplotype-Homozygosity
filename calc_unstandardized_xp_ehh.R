@@ -62,9 +62,11 @@ calc_unstandardized_xp_ehh <- function(popX,popY){
     }
   }
   
-  ## Calculate unstandardized XP-EHH between popX and popY (A Map of Recent Positive Selection in the Human Genome by Voight et al., equation (1)):
-  unstandardized_xp_ehh <- log(rowSums(ehh_popX)/rowSums(ehh_popY)) ## XP-EHH vector of the length equal to the number of SNPs, can ignore x-distance units as they cancel out of the equation
-  ## unstandardized_xp_ehh is approx. when the rate of EHH decay is similar on popX and popY alleles
+  ## Calculate unstandardized XP-EHH between popX and popY (A Map of Recent Positive Selection in the Human Genome
+  ##by Voight et al., equation (1)):
+  unstandardized_xp_ehh <- log(rowSums(ehh_popX)/rowSums(ehh_popY)) ## XP-EHH vector of the length equal to the number of SNPs,
+  ## can ignore x-distance units as they cancel out of the equation.
+  ## unstandardized_xp_ehh is approx. 0 when the rate of EHH decay is similar on popX and popY alleles.
   return(unstandardized_xp_ehh)
 }
 
