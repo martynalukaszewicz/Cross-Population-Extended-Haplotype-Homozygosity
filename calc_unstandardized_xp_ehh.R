@@ -1,5 +1,6 @@
 ## unstandardized XP-EHH claculations. Formula described in A Map of Recent Positive Selection in the Human Genome
-## by Voight et al., eq (1).
+## by Voight et al., eq (1). Webpage to the article:
+## https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0040072 
 
 library(plyr)  ## requires plyr package that contains count() function
 ## Example usage:
