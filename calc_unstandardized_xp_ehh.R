@@ -1,4 +1,6 @@
-## unstandardized XP-EHH claculations. Formula described in A Map of Recent Positive Selection in the Human Genome by Voight et al., eq (1).
+## unstandardized XP-EHH claculations. Formula described in A Map of Recent Positive Selection in the Human Genome
+## by Voight et al., eq (1).
+
 library(plyr)  ## requires plyr package that contains count() function
 
 popX <- as.data.frame(matrix(c(1,1,0,0,0,1,1,0,1,0,1,1,0,1,0,0,0,0,1,1,0,1,0,1),nrow=4,ncol=6,byrow=T))
