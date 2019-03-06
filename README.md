@@ -2,7 +2,7 @@
 
 
 ## Abstract
-The code derives unstandardized expected haplotype homozygosity, a statistic used to identify selective sweeps. Function written in R. 
+The code derives unstandardized expected haplotype homozygosity, a statistic used to identify selective sweeps. Function written for the bi-allelic SNPs case, (0,1), for statistic calculation between two populations. Function written in R. 
 
 https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0040072&type=printable
 
