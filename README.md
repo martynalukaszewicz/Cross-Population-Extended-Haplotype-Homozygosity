@@ -1,1 +1,1 @@
-# XP-Extended-Haplotype-Homozygosity
+# Cross-Population-Extended-Haplotype-Homozygosity
