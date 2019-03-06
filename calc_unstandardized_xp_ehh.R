@@ -1,17 +1,35 @@
-## unstandardized XP-EHH claculations. Formula described in A Map of Recent Positive Selection in the Human Genome
-## by Voight et al., eq (1). Webpage to the article:
-## https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0040072 
-
 library(plyr)  ## requires plyr package that contains count() function
+
+################
+## calc_unstandardized_xp_ehh.R
+##
+## @authors Martyna Lukaszewicz
+## @contact martyna@uidaho.edu
+################
+## @description Simulate unstandardized XP-EHH. 
+##              Formula described in A Map of Recent Positive Selection in the Human Genome
+##              by Voight et al., eq (1). Webpage to the article:
+##              https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0040072 
+##              
+## @param popX : population X in a data frame format, with rows corresponding to individuals in a population,
+##               and columns corresponding to bi-allelelic SNPs.
+## @param popX : population X in a data frame format, with rows corresponding to individuals in a population,
+##               and columns corresponding to bi-allelelic SNPs.
+##
+## @lastChange 2019-03-01
+##
+## @changes
+##  
+##
 ## Example usage:
+##
 ## Input 2 populations, popX and PopY, in a data frame format, with rows corresponding to individuals in a population,
 ## and columns corresponding to bi-allelelic SNPs. In the example each population is of size 4, with 6 SNPs per individual.
-popX <- as.data.frame(matrix(c(1,1,0,0,0,1,1,0,1,0,1,1,0,1,0,0,0,0,1,1,0,1,0,1),nrow=4,ncol=6,byrow=T))
-popY <-as.data.frame(matrix(c(0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0),nrow=4,ncol=6,byrow=T))
+##
+## popX <- as.data.frame(matrix(c(1,1,0,0,0,1,1,0,1,0,1,1,0,1,0,0,0,0,1,1,0,1,0,1),nrow=4,ncol=6,byrow=T))
+## popY <-as.data.frame(matrix(c(0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0),nrow=4,ncol=6,byrow=T))
 ## 
-
-
-
+###############################
 calc_unstandardized_xp_ehh <- function(popX,popY){
   n.col <- ncol(popX)  ## assumed ncol(popX)=ncol(popY)
   n.row <- nrow(popX)  ## assumed nrow(popX)=nrow(popY)
@@ -70,6 +88,6 @@ calc_unstandardized_xp_ehh <- function(popX,popY){
   ## unstandardized_xp_ehh is approx. 0 when the rate of EHH decay is similar on popX and popY alleles.
   return(unstandardized_xp_ehh)
 }
-
+#######################
 
 calc_unstandardized_xp_ehh(popX,popY)
